@@ -1,16 +1,17 @@
 var concertButn = document.getElementById("get-concert");
-var venueButn = document.getElementById("venue");
+var festivalButn = document.getElementById("get-festival");
 var afternoonButn = document.getElementById("get-afternoon");
 var nightButn = document.getElementById("get-night");
 var searchButn = document.getElementById("get-search");
 var dateButn = document.getElementById("get-date");
-var eventNameButn = document.getElementById("eventname");
-var pageOverButn = document.getElementById("pageover");
-var scrollNumberButn = document.getElementById("boldpagenum");
+var eventNameButn = document.getElementById("get-event");
+var scrollArrowRightButn = document.getElementById("get-Right");
+var scrollArrowLeftButn = document.getElementById("get-Left");
+var scrollNumberButn = document.getElementById("get-number");
 
 concertButn.addEventListener("click", concert);
 
-venueButn.addEventListener("click", Festival);
+festivalButn.addEventListener("click", Festival);
 
 afternoonButn.addEventListener("click", Afternoon);
 
@@ -22,9 +23,10 @@ dateButn.addEventListener("click", Date);
 
 eventNameButn.addEventListener("click", Event);
 
-pageOverButn.addEventListener("click", Page-Over);
+scrollArrowRightButn.addEventListener("click", Right-Arrow);
+
+scrollArrowLeftButn.addEventListener("click", Left-Arrow);
 
 scrollNumberButn.addEventListener("click", Number);
-
 
 
