@@ -1,0 +1,113 @@
+
+
+.events{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cards{
+    width:180px;
+    height: 200px;
+    background-color: white;
+    margin: 20px 10px 10px 10px;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    
+}
+
+.cards:hover{
+    width: 250px;
+    height: 300px;
+    transition: 500ms;
+}
+
+.eventname{
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0 0 0 5%;
+    color:  #9E63FF;
+}
+
+.cards:hover .eventname{
+    font-size:28px;
+}
+
+.venue{
+    display: none;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0 0 0 5%;
+}
+
+.cards:hover .venue{
+    display: block;
+}
+
+.time{
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0 0 0 5%;
+}
+
+.eventpic{
+    object-fit: cover;
+    width: 90%;
+    height: 60%;
+    margin-left: 5%;
+}
+
+.sitebutton{
+    opacity: 0%;
+    width: 50px;
+    height: max-content;
+    background-color: #9E63FF;
+    border-radius: 100px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    margin: -10% 0 0 75%;
+}
+
+.cards:hover .sitebutton{
+    opacity: 100%;
+    transition: 500ms;
+}
+
+.pagebottom{
+    background-color: black;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+}
+.pagebuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: bottom;
+    margin-top: 10px;
+}
+
+.pageover{
+    background-color: transparent;
+    border: none;
+    margin-top: 2px;
+}
+
+.boldpagenum{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 800;
+}
+
+.pagenum{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: 300;
+}
