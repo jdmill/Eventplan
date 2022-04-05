@@ -1,4 +1,61 @@
 
+
+
+.header {
+    background-color: #499edb;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.title  {
+    text-align: center;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#city {
+    font-weight: bold ;
+    color: black;  
+}
+
+#date {
+    color: black;
+}
+
+#search {
+    border: 2px;
+    border-color: black ;
+    border-radius: 50px;
+    margin: 20px;
+}
+
+form.search button{
+    border-radius: 50%;
+}
+
+.tags {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ border-radius: 50px; 
+ padding: 10px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    border-radius: 50px;
+    border: 10px;
+    border-color: black;
+=======
+
+  
 .pagebottom{
     background-color: black;
     width: 100%;
