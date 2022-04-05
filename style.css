@@ -1,4 +1,6 @@
 
+
+
 .header {
     background-color: #499edb;
     padding: 20px;
@@ -7,8 +9,6 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 25px;
-    
-
 }
 
 .title  {
@@ -16,19 +16,15 @@
     color: white;
     text-align: center;
     font-weight: bold;
-
-
 }
 
 #city {
     font-weight: bold ;
-    color: black;
-    
+    color: black;  
 }
 
 #date {
     color: black;
-    
 }
 
 #search {
@@ -36,9 +32,8 @@
     border-color: black ;
     border-radius: 50px;
     margin: 20px;
-
-    
 }
+
 form.search button{
     border-radius: 50%;
 }
@@ -47,10 +42,8 @@ form.search button{
  display: flex;
  flex-direction: row;
  justify-content: space-evenly;
- border-radius: 50px;
- 
+ border-radius: 50px; 
  padding: 10px;
- 
 }
 
 .calendar {
@@ -62,6 +55,13 @@ form.search button{
     border-color: black;
 =======
 
+  
+.pagebottom{
+    background-color: black;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+}
 
 .events{
     display: flex;
@@ -74,7 +74,7 @@ form.search button{
     width:180px;
     height: 200px;
     background-color: white;
-    margin: 20px 10px 10px 10px;
+    margin: 20px;
     border: solid 2px black;
     display: flex;
     flex-direction: column;
@@ -141,36 +141,5 @@ form.search button{
     transition: 500ms;
 }
 
-.pagebottom{
-    background-color: black;
-    width: 100%;
-    height: max-content;
-    padding-bottom: 20px;
-}
-.pagebuttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: bottom;
-    margin-top: 10px;
-}
 
-.pageover{
-    background-color: transparent;
-    border: none;
-    margin-top: 2px;
-}
 
-.boldpagenum{
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-weight: 800;
-}
-
-.pagenum{
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-weight: 300;
-}
