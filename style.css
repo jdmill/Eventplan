@@ -1,0 +1,60 @@
+.header {
+    background-color: #499edb;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+    
+
+}
+
+.title  {
+    text-align: center;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+
+
+}
+
+#city {
+    font-weight: bold ;
+    color: black;
+    
+}
+
+#date {
+    color: black;
+    
+}
+
+#search {
+    border-color: black ;
+    border-radius: 50px;
+    margin: 20px;
+
+    
+}
+form.search button{
+    border-radius: 50%;
+}
+
+.tags {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ border-radius: 50px;
+ margin: 0 auto;
+ padding: 10px 0;
+ 
+}
+
+#calendar {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    border-radius: 1.2rem;
+    border: none;
+}

@@ -8,10 +8,43 @@
   <link rel="stylesheet" href="./style.css" />
   <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
+  <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
 </head>
 
 <body>
+  <div class = "header" >
+    <div id = "city" >
+      <h1>City</h1>
+    </div>
+    <h1 class =" title">EventPlan</h1>
+    <div id = "date" >
+      <h1>April 5, 2022</h1>
+    </div>
+    
+  </div> 
 
+  <form id ="search">
+    <input type="search" id="query" name="q" placeholder="Location...">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+
+   <form id = "calendar">
+ <input type="text" id="datapicker" placeholder="Date">
+   </form>
+  
+  <div class = "tags" >
+  <button type="button">Concert</button>
+  <button type = "button">Festival</button>
+  <button type = "button">All ages</button>
+  <button type = "button">Afternoon</button>
+  <button type = "button">Night</button>
+  </div>
+  
 
 
     <script src="./js.js"></script>
