@@ -1,4 +1,10 @@
 
+.pagebottom{
+    background-color: black;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 20px;
+}
 
 .events{
     display: flex;
@@ -11,7 +17,7 @@
     width:180px;
     height: 200px;
     background-color: white;
-    margin: 20px 10px 10px 10px;
+    margin: 20px;
     border: solid 2px black;
     display: flex;
     flex-direction: column;
@@ -78,36 +84,5 @@
     transition: 500ms;
 }
 
-.pagebottom{
-    background-color: black;
-    width: 100%;
-    height: max-content;
-    padding-bottom: 20px;
-}
-.pagebuttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: bottom;
-    margin-top: 10px;
-}
 
-.pageover{
-    background-color: transparent;
-    border: none;
-    margin-top: 2px;
-}
 
-.boldpagenum{
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-weight: 800;
-}
-
-.pagenum{
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-weight: 300;
-}
