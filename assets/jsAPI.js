@@ -95,13 +95,13 @@ function fetchMusicData(city) {
     "&locale=*";
   //will take parameter inputs to create query URL.
   //if loop here.
-  console.log(queryMusicURL);
+  //console.log(queryMusicURL);
   //fetches TicketMaster API data based on inputed parameters
   fetch(queryMusicURL)
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          console.log(data);
+          //console.log(data);
           createEventCard(data);
         });
       }
@@ -197,6 +197,7 @@ function getForecast(lat, lon) {
           console.log(data);
           //displayWeather function call here
           //displayWeather(data);
+          printForecast(data);
         });
       }
     })
@@ -204,5 +205,12 @@ function getForecast(lat, lon) {
       console.log("Error: " + error);
     });
 }
-
+//prints forecast data
+function printForecast(data) {
+  var temp = data.daily[0].temp.day;
+  var weathericon = data.daily[0].weather[0].icon;
+  var iconurl = "https://openweathermap.org/img/wn/" + weathericon + "@2x.png";
+  $("#temp").html(temp + "°F");
+  $("#weather-icon").html("<img src=" + iconurl + ">");
+}
 //function that will parse weather data and display somewhere on the page
