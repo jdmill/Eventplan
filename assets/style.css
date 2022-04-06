@@ -1,4 +1,4 @@
-
+ 
 
 
 .header {
@@ -17,6 +17,17 @@
     color: white;
     text-align: center;
     font-weight: bold;
+}
+
+.day{
+    padding: 25px ;
+    color: rgb(27, 27, 27);
+    background-color: #499edb;
+}
+.day:hover{
+    color: #9E63FF;
+    background-color: rgb(27, 27, 27);
+
 }
 
 #city {
@@ -57,9 +68,7 @@ form{
 form.search button{
     border-radius: 50%;
 }
-.date{
-    padding: 0 0 0 5px;
-}
+
 
 .tags {
  display: flex;
