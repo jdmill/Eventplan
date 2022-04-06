@@ -11,9 +11,45 @@
 </head>
 
 <body>
+  <div class = "header" >
+    <div id = "city" >
+      <h1>City</h1>
+    </div>
+    <h1 class =" title">EventPlan</h1>
+    <div id = "date" >
+      <h1>April 5, 2022</h1>
+    </div>
+  
+  </div> 
+
+  <div class="wrap">
+    <div class="search">
+       <input type="text" class="searchTerm" placeholder="Location...">
+       <button type="submit" class="searchButton">
+         <i class="fa fa-search"></i>
+      </button>
+    </div>
+ </div>
+
+ 
+ <input type="text" name="select_date" placeholder="Location..." id="select_date">
+<script type="text/javascript">
+   $(document).ready(function(){
+     $("#select_date").datepicker();
+   })
+</script>
+   
+    
+  <a href="#" class="btn Genre">Concert</a>
+
+  <a href="#" class="btn All-ages">All ages</a>
+  <a href="#" class="btn Afternoon">Afternoon</a>
+  <a href="#" class="btn Night">Night</a>
+  
 
 
-
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
     <script src="./js.js"></script>
 </body>
 </html>
