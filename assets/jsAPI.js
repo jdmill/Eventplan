@@ -119,15 +119,19 @@ function createEventCard(data) {
     var createTitle = document.createElement("p");
     var createImg = document.createElement("img");
     var createTime = document.createElement("p");
+    var createVenue = document.createElement("p");
+    var createSiteLink = document.createElement("a");
 
     //sets attribute to card - iteration of the loop
     createCard.setAttribute("id", "card-" + i);
+    createCard.setAttribute("class", "cards");
     //appends the card into the events div
     eventsSection.appendChild(createCard);
 
     //sets title attribute and text content
     createTitle.setAttribute("id", "event-" + i);
-    createTitle.textContent = data._embedded.events[i].name;
+    createTitle.textContent = data._embedded.events[i]._embedded.attractions[0].name;
+    createTitle.setAttribute("class", "eventname");
     console.log(createTitle);
     //appends the title element to the child
     createCard.appendChild(createTitle);
@@ -137,9 +141,42 @@ function createEventCard(data) {
     createImg.src =
       data._embedded.events[i].images[0].url;
     console.log(createImg);
+    createImg.setAttribute("class", "eventpic");
     createCard.appendChild(createImg);
 
+    //sets venue attribute and text content
+    createVenue.setAttribute("id", "venue-" + i);
+    createVenue.textContent = data._embedded.events[i]._embedded.venues[0].name;
+    createVenue.setAttribute("class", "venue");
+    console.log(createVenue);
+    //appends the venue element to the child
+    createCard.appendChild(createVenue);
+
     createTime.setAttribute("id", "time-1" + i);
+    createTime.textContent = data._embedded.events[i].dates.start.localTime;
+    createTime.setAttribute("class", "time");
+    console.log(createTime);
+    //changing event time from 24 hour to 12-hour and adding am/pm
+    var timechange = createTime.innerText;
+    console.log(timechange);
+    timechange = moment(timechange, "HH:mm:ss").format("hh:mm a");
+    console.log(timechange);
+    createTime.innerText = timechange;
+    //appends the time element to the child
+    createCard.appendChild(createTime);
+
+    //sets site button attribute and creates link
+    createSiteLink.setAttribute("id", "link-" + i);
+    var linkurl = data._embedded.events[i].url;
+    console.log(linkurl);
+    createSiteLink.textContent = "site";
+    createSiteLink.setAttribute("href", linkurl);
+    createSiteLink.setAttribute("class", "sitebutton");
+    createSiteLink.setAttribute("style", "text-decoration: none");
+    createSiteLink.setAttribute("target", "_blank");
+    console.log(createSiteLink);
+    //appends the button element to the child
+    createCard.appendChild(createSiteLink);
   }
 };
 //function the retrieves forecast data from openweather API based on lat & lon
