@@ -207,7 +207,7 @@ function getForecast(lat, lon) {
 }
 //prints forecast data
 function printForecast(data) {
-  var temp = data.daily[0].temp.day;
+  var temp = Math.round(data.daily[0].temp.day);
   var weathericon = data.daily[0].weather[0].icon;
   var iconurl = "https://openweathermap.org/img/wn/" + weathericon + "@2x.png";
   $("#temp").html(temp + "°F");
