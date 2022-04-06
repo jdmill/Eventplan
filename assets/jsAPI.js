@@ -13,6 +13,12 @@ var zip = "";
 var eventsSection = document.querySelector(".events");
 var eventTitle = document.querySelector("#event")
 
+// Displays Current Date
+var today = moment();
+$(".day").text(today.format("MMM Do, YYYY"));
+console.log(today)
+
+
 
 //readies the date picker function and sets default date to today
 $(document).ready(function () {
