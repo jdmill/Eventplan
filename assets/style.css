@@ -59,6 +59,7 @@ form.search button{
 .pagebottom{
     background-color: black;
     width: 100%;
+    min-height: 200px;
     height: max-content;
     padding-bottom: 20px;
 }
@@ -95,27 +96,32 @@ form.search button{
 }
 
 .cards:hover{
-    width: 250px;
+    width: 280px;
     height: 300px;
+    min-height: fit-content;
     transition: 500ms;
 }
 
 .eventname{
     font-weight: 700;
-    font-size: 22px;
-    margin: 0 0 0 5%;
+    font-size: 19px;
+    line-height: 18px;
+    margin: 4% 4% 4% 5%;
     color:  #9E63FF;
 }
 
 .cards:hover .eventname{
     font-size:28px;
+    line-height: 26px;
+    transition: 500ms;
 }
 
 .venue{
     display: none;
     font-weight: 500;
     font-size: 20px;
-    margin: 0 0 0 5%;
+    line-height: 18px;
+    margin: 0 3% 0 5%;
 }
 
 .cards:hover .venue{
@@ -145,12 +151,14 @@ form.search button{
     color: white;
     font-size: 16px;
     font-weight: 400;
-    margin: -10% 0 0 75%;
+    text-align: center;
+    margin: -10% 0 5% 75%;
 }
 
 .cards:hover .sitebutton{
     opacity: 100%;
-    transition: 500ms;
+    transition: 1000ms;
+    color: white;
 }
 
 
