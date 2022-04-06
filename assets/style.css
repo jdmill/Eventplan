@@ -2,16 +2,21 @@
 
 
 .header {
-    background-color: #499edb;
-    padding: 20px;
+    color: white;
+    background-color: #9E63FF;
+    padding: 1.25rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 1.563rem;
     
 }
 
+/* round edges - border radius 
+justify content is a flex property look up on css flexbox tricks 
+fix why you cant style as a group
+px to rem */
 .title  {
     text-align: center;
     color: white;
@@ -20,15 +25,12 @@
 }
 
 .day{
-    padding: 25px ;
-    color: rgb(27, 27, 27);
-    background-color: #499edb;
+    padding: 1.563rem ;
+    color: white;
+    background-color: #9E63FF;
 }
-.day:hover{
-    color: #9E63FF;
-    background-color: rgb(27, 27, 27);
 
-}
+
 
 #city {
     font-weight: bold ;
@@ -52,17 +54,17 @@ button{
     background: #9E63FF;
     color: white;
     cursor: pointer;
-    padding: 5px 10px 5px 5px; 
+    padding: 0.313rem 0.625rem 0.313rem 0.313rem; 
 }
 
 #search {
-    border: 2px;
+    border: 0.125rem;
     border-color: black ;
-    border-radius: 50px;
-    margin: 20px;
+    border-radius: 3.125rem;
+    margin: 1.25rem;
 }
 form{
-    padding: 0px 0px 2px 15px;
+    padding: 0rem 0rem 0.125rem 15px;
 }
 
 form.search button{
@@ -74,16 +76,16 @@ form.search button{
  display: flex;
  flex-direction: row;
  justify-content: space-evenly;
- border-radius: 50px; 
- padding: 10px;
+ border-radius: 3.125rem; 
+ padding: 0.625rem;
 }
 
 .calendar {
     display: flex;
     flex-direction: row;
-    margin: 20px;
-    border-radius: 50px;
-    border: 10px;
+    margin: 1.25rem;
+    border-radius: 3.125rem;
+    border: 0.625rem;
     border-color: rgb(27, 27, 27);
 }
 
@@ -91,9 +93,9 @@ form.search button{
 .pagebottom{
     background-color: rgb(27, 27, 27);
     width: 100%;
-    min-height: 200px;
+    min-height: 12.5rem;
     height: max-content;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 
 .events{
@@ -105,22 +107,22 @@ form.search button{
 
 /*Selects all cards of the events section*/
 .events > div {
-    width:180px;
-    height: 200px;
+    width: 11.25rem;
+    height: 12.5rem;
     background-color: white;
-    margin: 20px;
-    border: solid 2px black;
+    margin: 1.25rem;
+    border: solid 0.125rem black;
     display: flex;
     flex-direction: column;
     align-content: space-around;
 }
 
 .cards{
-    width:180px;
-    height: 200px;
+    width: 11.25rem;
+    height: 12.5rem;
     background-color: white;
-    margin: 20px;
-    border: solid 2px black;
+    margin: 125rem;
+    border: solid 0.125rem black;
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -128,31 +130,31 @@ form.search button{
 }
 
 .cards:hover{
-    width: 280px;
-    height: 300px;
+    width: 17.5rem;
+    height: 18.75rem;
     min-height: fit-content;
     transition: 500ms;
 }
 
 .eventname{
     font-weight: 700;
-    font-size: 19px;
-    line-height: 18px;
+    font-size: 1.188rem;
+    line-height: 11.75rem;
     margin: 4% 4% 4% 5%;
     color:  #9E63FF;
 }
 
 .cards:hover .eventname{
-    font-size:28px;
-    line-height: 26px;
+    font-size: 1.75rem;
+    line-height: 1.625rem;
     transition: 500ms;
 }
 
 .venue{
     display: none;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 18px;
+    font-size: 1.25rem;
+    line-height: 1.125rem;
     margin: 0 3% 0 5%;
 }
 
@@ -162,7 +164,7 @@ form.search button{
 
 .time{
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 0 0 0 5%;
 }
 
@@ -175,16 +177,16 @@ form.search button{
 
 .sitebutton{
     opacity: 0%;
-    width: 50px;
+    width: 3.125rem;
     height: max-content;
     background-color: #9E63FF;
-    border-radius: 100px;
+    border-radius: 6.25rem;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     text-align: center;
-    margin: -10% 0 5% 75%;
+    margin: 0% 0 5% 75%;
 }
 
 .cards:hover .sitebutton{
@@ -193,3 +195,27 @@ form.search button{
     color: white;
 }
 
+/* Calender Design */
+#ui-datepicker-div{
+    background-color: white;
+    height: 18rem;
+    width: 18rem;
+
+}
+.ui-state-default{
+    color: #9E63FF;
+    margin: .5rem;
+    
+} 
+.ui-state-highlight{
+    color: white;
+    background-color: #9E63FF;
+}
+
+td{
+    padding: .5rem .5rem;
+}
+
+tr {
+    color: #9E63FF;
+}
