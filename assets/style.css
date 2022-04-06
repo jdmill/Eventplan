@@ -9,6 +9,7 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 25px;
+    
 }
 
 .title  {
@@ -20,11 +21,27 @@
 
 #city {
     font-weight: bold ;
-    color: black;  
+    color: rgb(27, 27, 27);  
 }
 
 #date {
-    color: black;
+    color: rgb(27, 27, 27);
+}
+
+#datepicker{
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    background: #9E63FF;
+
+}
+
+button{
+    display: inline-block;
+    background: #9E63FF;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px 5px 5px; 
 }
 
 #search {
@@ -33,9 +50,15 @@
     border-radius: 50px;
     margin: 20px;
 }
+form{
+    padding: 0px 0px 2px 15px;
+}
 
 form.search button{
     border-radius: 50%;
+}
+.date{
+    padding: 0 0 0 5px;
 }
 
 .tags {
@@ -52,12 +75,12 @@ form.search button{
     margin: 20px;
     border-radius: 50px;
     border: 10px;
-    border-color: black;
+    border-color: rgb(27, 27, 27);
 }
 
   
 .pagebottom{
-    background-color: black;
+    background-color: rgb(27, 27, 27);
     width: 100%;
     min-height: 200px;
     height: max-content;
