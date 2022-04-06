@@ -70,6 +70,18 @@ form.search button{
     flex-wrap: wrap;
 }
 
+/*Selects all cards of the events section*/
+.events > div {
+    width:180px;
+    height: 200px;
+    background-color: white;
+    margin: 20px;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
 .cards{
     width:180px;
     height: 200px;
