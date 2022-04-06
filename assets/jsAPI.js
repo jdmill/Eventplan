@@ -88,6 +88,7 @@ function fetchMusicData(city) {
     "https://app.ticketmaster.com/discovery/v2/events?apikey=" +
     musicAPI +
     //place holder - will replace with var once form functionality is created
+    //need to add date functionality
     "&classificationName=Music" +
     "&city=" +
     city +
