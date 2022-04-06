@@ -1,4 +1,4 @@
- 
+
 
 
 .header {
@@ -9,7 +9,6 @@
     justify-content: space-around;
     align-items: center;
     margin-bottom: 25px;
-    
 }
 
 .title  {
@@ -19,40 +18,13 @@
     font-weight: bold;
 }
 
-.day{
-    padding: 25px ;
-    color: rgb(27, 27, 27);
-    background-color: #499edb;
-}
-.day:hover{
-    color: #9E63FF;
-    background-color: rgb(27, 27, 27);
-
-}
-
 #city {
     font-weight: bold ;
-    color: rgb(27, 27, 27);  
+    color: black;  
 }
 
 #date {
-    color: rgb(27, 27, 27);
-}
-
-#datepicker{
-    text-align: center;
-    font-weight: 700;
-    color: white;
-    background: #9E63FF;
-
-}
-
-button{
-    display: inline-block;
-    background: #9E63FF;
-    color: white;
-    cursor: pointer;
-    padding: 5px 10px 5px 5px; 
+    color: black;
 }
 
 #search {
@@ -61,14 +33,10 @@ button{
     border-radius: 50px;
     margin: 20px;
 }
-form{
-    padding: 0px 0px 2px 15px;
-}
 
 form.search button{
     border-radius: 50%;
 }
-
 
 .tags {
  display: flex;
@@ -84,12 +52,12 @@ form.search button{
     margin: 20px;
     border-radius: 50px;
     border: 10px;
-    border-color: rgb(27, 27, 27);
+    border-color: black;
 }
 
   
 .pagebottom{
-    background-color: rgb(27, 27, 27);
+    background-color: black;
     width: 100%;
     min-height: 200px;
     height: max-content;
