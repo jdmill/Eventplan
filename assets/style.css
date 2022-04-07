@@ -1,22 +1,15 @@
 
 
-
 .header {
     background-color: #499edb;
-    padding: 20px;
+    padding: 1vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 1vh;
 }
 
-.title  {
-    text-align: center;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-}
 
 #city {
     font-weight: bold ;
@@ -27,15 +20,51 @@
     color: black;
 }
 
-#search {
-    border: 2px;
-    border-color: black ;
+.search-button {
     border-radius: 50px;
-    margin: 20px;
 }
 
-form.search button{
-    border-radius: 50%;
+#city-search-input {
+    border-radius: 50px;
+}
+
+#city-search-input button {
+    border-radius: 50px;
+}
+
+#datepicker {
+    border-radius: 50px;
+}
+
+/*parameter selector buttons*/
+.para-buttons {
+    border-radius: 50px;
+    padding: 10px;
+    
+}
+
+/*radio button styling*/
+
+.radio-toolbar input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 5px 5px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 35px;
+    margin-top: 1em;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+    background-color: #bfb;
+    border-color: #4c4;
 }
 
 .tags {
@@ -55,7 +84,6 @@ form.search button{
     border-color: black;
 }
 
-  
 .pagebottom{
     background-color: black;
     width: 100%;
@@ -72,17 +100,6 @@ form.search button{
 }
 
 /*Selects all cards of the events section*/
-.events > div {
-    width:180px;
-    height: 200px;
-    background-color: white;
-    margin: 20px;
-    border: solid 2px black;
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-}
-
 .cards{
     width:180px;
     height: 200px;
@@ -92,7 +109,7 @@ form.search button{
     display: flex;
     flex-direction: column;
     align-content: space-around;
-    
+    border-radius: 20px;
 }
 
 .cards:hover{
@@ -108,12 +125,16 @@ form.search button{
     line-height: 18px;
     margin: 4% 4% 4% 5%;
     color:  #9E63FF;
+    
 }
 
 .cards:hover .eventname{
     font-size:28px;
     line-height: 26px;
     transition: 500ms;
+    text-shadow: 1px 1px 2px black,
+    0 0 25px blue,
+    0 0 5px darkblue;
 }
 
 .venue{
