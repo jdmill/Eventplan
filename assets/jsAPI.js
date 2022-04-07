@@ -40,13 +40,13 @@ $(".search-bar").submit(function (event) {
   
 
   if (radioTime === "day") {
-    startTime = "0:00:00";
+    startTime = "03:00:00";
     endTime = "15:00:00";
   } else if (radioTime === "night") {
     startTime = "15:00:01";
     endTime = "23:59:59";
   } else if (radioTime === "allDay") {
-    startTime = "06:00:00";
+    startTime = "03:00:00";
     endTime = "23:59:59";
   }
 
