@@ -273,6 +273,8 @@ function printForecast(data) {
   var weathericon = data.daily[0].weather[0].icon;
   var iconurl = "https://openweathermap.org/img/wn/" + weathericon + "@2x.png";
   $("#temp").html(temp + "°F");
-  $("#weather-icon").html("<img src=" + iconurl + ">");
+  $("#weather-icon").html("<img class='icon' src=" + iconurl + ">");
+  
+
 }
 //function that will parse weather data and display somewhere on the page
