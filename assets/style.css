@@ -1,45 +1,96 @@
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 .header {
-    background-color: #499edb;
+    background-color: #9E63FF;
+    width: 100%;
+    height: 5rem;
     padding: 1vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 1vh;
 }
 
-
-#city {
-    font-weight: bold ;
-    color: black;  
+.city {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-left: 2rem;
 }
 
-#date {
+.date {
     color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-left: 6rem;
+}
+
+.pageTitle{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-left: 4rem;
+}
+
+.weather{
+    width: 9rem;
+    height: 3.5rem;
+    margin-right: -1rem;
+    border: solid .15rem black;
+    border-radius: 100px 0 0 100px;
+    
+}
+
+.temp{
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    margin-top: .5rem;
+}
+
+.icon{
+    width: 3rem;
+    height: 3rem;
+    margin-top: .8rem;
+    filter: grayscale(100%)
 }
 
 .search-button {
-    border-radius: 50px;
+    border-radius: 3.125rem;
+    height: 2.3rem;
+    width: 2.3rem;
+    color: white;
+    background-color: black;
+    border: none;
 }
 
 #city-search-input {
-    border-radius: 50px;
+    border-radius: 3.125rem;
+    border: .1rem solid black;
+    height: 2.5rem;
+    margin-right: .3rem;
 }
 
-#city-search-input button {
-    border-radius: 50px;
-}
 
 #datepicker {
-    border-radius: 30px;
+    border-radius: 1.875rem;
+    height: 2.5rem;
+    border: solid black .1rem;
 }
 
 /*parameter selector buttons*/
 .para-buttons {
-    border-radius: 50px;
-    padding: 10px;
+    border-radius: 3.125rem;
+    padding: 0.625rem;
     
 }
 
@@ -53,43 +104,44 @@
 
 .radio-toolbar label {
     display: inline-block;
-    background-color: #ddd;
-    padding: 5px 5px;
+    background-color: white;
+    padding: 0.313rem 0.313rem;
     font-family: sans-serif, Arial;
-    font-size: 16px;
-    border: 2px solid #444;
-    border-radius: 35px;
+    font-size: 1rem;
+    border: 0.1rem solid black;
+    border-radius: 2.188rem;
     margin-top: 1em;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
-    background-color: #bfb;
-    border-color: #4c4;
+    background-color: #9E63FF;
+    border-color: #9E63FF;
+    color: white;
 }
 
 .tags {
  display: flex;
  flex-direction: row;
  justify-content: space-evenly;
- border-radius: 50px; 
- padding: 10px;
+ border-radius: 3.125rem; 
+ padding: 0.625rem;
 }
 
 .calendar {
     display: flex;
     flex-direction: row;
-    margin: 20px;
-    border-radius: 50px;
-    border: 10px;
+    margin: 1.25rem;
+    border-radius: 3.125rem;
+    border: 0.625rem;
     border-color: black;
 }
 
 .pagebottom{
     background-color: black;
     width: 100%;
-    min-height: 200px;
+    min-height: 12.5rem;
     height: max-content;
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
 }
 
 .events{
@@ -101,47 +153,48 @@
 
 /*Selects all cards of the events section*/
 .cards{
-    width:180px;
-    height: 200px;
+    width: 11.25rem;
+    height: 12.5rem;
     background-color: white;
-    margin: 20px;
-    border: solid 2px black;
+    margin: 1rem;
+    border: solid .125rem black;
     display: flex;
     flex-direction: column;
     align-content: space-around;
-    border-radius: 20px;
+    border-radius: .25rem;
 }
 
 .cards:hover{
-    width: 280px;
-    height: 300px;
+    width: 17.5rem;
+    height: 18.75rem;
+    margin: 1rem .25rem 1rem .25rem;
     min-height: fit-content;
     transition: 500ms;
 }
 
 .eventname{
     font-weight: 700;
-    font-size: 19px;
-    line-height: 18px;
+    font-size: 1.188rem;
+    line-height: 1.125rem;
     margin: 4% 4% 4% 5%;
     color:  #9E63FF;
     
 }
 
 .cards:hover .eventname{
-    font-size:28px;
-    line-height: 26px;
+    font-size: 1.75rem;
+    line-height: 1.625rem;
     transition: 500ms;
-    text-shadow: 1px 1px 2px black,
-    0 0 25px blue,
-    0 0 5px darkblue;
+    text-shadow: 0.063rem 0.063rem .125rem black,
+    /* 0 0 1.563rem blue,
+    0 0 .313rem darkblue; */
 }
 
 .venue{
     display: none;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 18px;
+    font-size: 1.25rem;
+    line-height: 1.125rem;
     margin: 0 3% 0 5%;
 }
 
@@ -151,7 +204,7 @@
 
 .time{
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 0 0 0 5%;
 }
 
@@ -164,13 +217,13 @@
 
 .sitebutton{
     opacity: 0%;
-    width: 50px;
+    width: 3.125rem;
     height: max-content;
     background-color: #9E63FF;
-    border-radius: 100px;
+    border-radius: 6.25rem;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     text-align: center;
     margin: -10% 0 5% 75%;
