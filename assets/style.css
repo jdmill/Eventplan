@@ -3,6 +3,7 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
 /*header styling*/
 .header {
     background-color: #9E63FF;
@@ -64,7 +65,9 @@ html, body {
     filter: grayscale(100%)
 }
 
+
 /*Search button styling*/
+
 .search-button {
     border-radius: 3.125rem;
     height: 2.3rem;
@@ -72,6 +75,11 @@ html, body {
     color: white;
     background-color: black;
     border: none;
+}
+
+<
+.search-button:hover{
+    background-color: #9E63FF;
 }
 
 /*Search History List*/
@@ -83,8 +91,12 @@ html, body {
     border-radius: 3.125rem;
     border: .1rem solid black;
     height: 2.5rem;
+
+    margin-left: 2rem;
+
     margin-right: .3rem;
     margin-left: 1.5rem;
+
 }
 
 
@@ -92,7 +104,11 @@ html, body {
     border-radius: 1.875rem;
     height: 2.5rem;
     border: solid black .1rem;
+
+    margin-left: .5rem;
+
     margin-right: 3rem;
+
 }
 
 /*parameter selector buttons*/
@@ -104,23 +120,41 @@ html, body {
     
 }
 
+.row{
+    margin: 0 !important;
+
+
 .param-div {
     margin-left: 10rem;
+
 }
 /*radio button styling*/
+.radio-toolbar{
+    margin-right: 2rem;
+}
 
 /*Radio Buttons Toolbar*/
 .radio-toolbar input[type="radio"] {
     opacity: 0;
     width: 0;
+    margin: 1rem 0 0 0;
 }
 
 .radio-toolbar label {
     background-color: white;
     padding: 0.313rem 0.313rem;
+
+    font-family: sans-serif, "Inter";
     font-size: 1rem;
     border: 0.1rem solid black;
     border-radius: 2.188rem;
+    margin-bottom: 0;
+    
+
+    font-size: 1rem;
+    border: 0.1rem solid black;
+    border-radius: 2.188rem;
+
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
@@ -129,13 +163,59 @@ html, body {
     color: white;
 }
 
+
+ul{
+    padding-left: 0;
+    margin: .5rem 0 1rem 2rem !important;
+    font-family: sans-serif, "Inter";
+}
+
+.btn{
+    border: solid black .1rem !important;
+    border-radius: 4rem !important;
+    padding: 0 !important;
+    margin-right: .5rem;
+    width: 4.5rem;
+    height: 2.5rem;
+}
+
+.btn:hover{
+    border: solid #9E63FF .1rem !important;
+    background-color: #9E63FF;
+    color: white !important;
+    border-radius: 4rem !important;
+    padding: 0 !important;
+    margin-right: .5rem;
+    width: 4.5rem;
+    height: 2.5rem;
+}
+
+.tags {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ border-radius: 3.125rem; 
+ padding: 0.625rem;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: row;
+    margin: 1.25rem;
+    border-radius: 3.125rem;
+    border: 0.625rem;
+    border-color: black;
+}
+
+=======
 /*Card Display Area*/
 .pagebottom{
     background-color: black;
     width: 100%;
-    min-height: 12.5rem;
+    min-height: 25rem;
     height: max-content;
     padding-bottom: 1.25rem;
+    margin-top: 4rem;
 }
 
 .events{
