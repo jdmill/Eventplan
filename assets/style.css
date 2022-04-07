@@ -144,12 +144,10 @@ html, body {
     padding-bottom: 1.25rem;
 }
 
-
-
-
 .events{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -162,26 +160,16 @@ html, body {
     border: solid .125rem black;
     display: flex;
     flex-direction: column;
+    align-content: space-around;
     border-radius: .25rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
-
-image{
-    transition: 750ms;
-}
-
-p#event{
-    transition: 750ms;
-}
-
 
 .cards:hover{
     width: 17.5rem;
     height: 18.75rem;
-    margin: 0rem .15rem 0rem .15rem;
+    margin: 1rem .25rem 1rem .25rem;
     min-height: fit-content;
-    transition: 750ms;
+    transition: 500ms;
 }
 
 .eventname{
@@ -196,7 +184,7 @@ p#event{
 .cards:hover .eventname{
     font-size: 1.75rem;
     line-height: 1.625rem;
-    transition: 750ms;
+    transition: 500ms;
     text-shadow: 0.063rem 0.063rem .125rem black,
     /* 0 0 1.563rem blue,
     0 0 .313rem darkblue; */
@@ -208,9 +196,6 @@ p#event{
     font-size: 1.25rem;
     line-height: 1.125rem;
     margin: 0 3% 0 5%;
-    transition: 750ms;
-    display: flex;
-    justify-content: center;
 }
 
 .cards:hover .venue{
@@ -221,7 +206,6 @@ p#event{
     font-weight: 300;
     font-size: 1.25rem;
     margin: 0 0 0 5%;
-    transition: 750ms;
 }
 
 .eventpic{
@@ -243,12 +227,11 @@ p#event{
     font-weight: 400;
     text-align: center;
     margin: -10% 0 5% 75%;
-    transition: 100ms;
 }
 
 .cards:hover .sitebutton{
     opacity: 100%;
-    transition: 100ms;
+    transition: 1000ms;
     color: white;
 }
 
