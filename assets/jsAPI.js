@@ -7,6 +7,7 @@ var geocodingAPI = "AIzaSyBp0qdtLkgEAa-WU1_78Yt3TOiB3gR-Rn0";
 //inits var
 var city = "";
 var zip = "";
+var cityList = [];
 
 //init values
 var startTime = "07:00:00";
