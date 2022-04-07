@@ -1,5 +1,5 @@
 //Open Weather API Key
-var weatherAPI = "c05979fd50e5119c43cbd3ab81fe852f";
+var weatherAPI = "7ff8ebfea098ff405322b7359f08920f";
 //TicketMaster API Explorer v2.0
 var musicAPI = "BZZo8qKtqkk1hGSW6C14VUHCfMKAfSgz";
 //google geocoding API
