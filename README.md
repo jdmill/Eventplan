@@ -25,3 +25,32 @@ WHEN I choose an option like Genre or Time Of Day
 Then the presented results change accordingly
 WHEN I choose a date, if it is with the forecast range
 THEN I am presented with weather for that day in the form of the Temp and an ICON
+```
+## Features
+
+ We implemented some features that make our website accessible and easy to navigate for every user.
+ Using the search bar will assist the user in choosing the desired location for an event they would like to attend
+ We added filter tags that will make picking out the the event the user will like to attend to much easier.
+ The filters are time related, so the users will be able to decide when and which event they are interested in.
+ Each time you search a certain location, the weather for that day will display, so it will help the user plan out their day.
+ If the user wants to see an artist/band a specific day, users can use the calendar feature to book future concerts.
+ Once the user finds the perfect event they would like to attend, there is a button that will link the user to ticketmaster.com, once there the user can purchase their tickets.
+ Our website is also mobile
+
+
+ ## APIs
+
+ for this project we used:
+
+ OpenWeather One Call api 
+
+ Ticketmaster api 
+
+
+ ## Javascript
+
+ for this project we used:
+
+ Moment.js
+
+ Jquery
