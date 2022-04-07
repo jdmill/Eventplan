@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventPlan</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+  </head>
 
 <head>
   <meta charset="UTF-8">
@@ -12,43 +26,122 @@
 </head>
 
 <body>
-  <div class = "header" >
-    <div id = "city" >
-      <h1>City</h1>
-    </div>
-    <h1 class =" title">EventPlan</h1>
-    <div id = "date" >
-      <h1>April 5, 2022</h1>
-    </div>
   
-  </div> 
-
-  <div class="wrap">
-    <div class="search">
-       <input type="text" class="searchTerm" placeholder="Location...">
-       <button type="submit" class="searchButton">
-         <i class="fa fa-search"></i>
-      </button>
+    <!--Header Div-->
+    <div class="header">
+      <!--City-->
+      <div>
+        <h1 id="header-city">City</h1>
+      </div>
+      <!--Website Title Name-->
+      <h1 class="header-title">EventPlan</h1>
+      <!--Date-->
+      <div>
+        <h1 id="header-date">April 5, 2022</h1>
+      </div>
+      <!--Forecast Display-->
+      <div class="d-flex flex-row justify-content-end align-items-baseline">
+        <h2 id="temp"></h2>
+        <p id="weather-icon"></p>
+      </div>
     </div>
- </div>
+    <!--Search bar-->
+    <div class="wrap">
+      <div class="search">
+         <input type="text" class="searchTerm" placeholder="Location...">
+         <button type="submit" class="searchButton">
+           <i class="fa fa-search"></i>
+        </button>
+      </div>
+   </div>
+      <!--parameter selectors-->
+      <div class="btn">
+        <button class="Concert" type="button">Concert</button>
+        <button class="Festival" type="button">Festival</button>
+        <button  class="All-ages"  type="button">All ages</button>
+        <button class="Afternoon" type="button">Afternoon</button>
+        <button class="Night" type="button">Night</button>
+      </div>
+      <!--flatpickr datepicker-->
+      <div class=" col-sm-2" style=" border: 3px solid black; position: relative; bottom:30px;
+      margin-left:35px; border-radius: 15px 15px 15px 15px">
+        <form>
+          <input class="form-control"  type="date"placeholder="date">
+        </form>
+     </div>
 
+    <!-- event cards -->
+    <section class="pagebottom">
+      <div class="events">
+        <!-- <div id="" class="cards">
+          <p id="" class="eventname">Event Name</p>
+          <img
+            id=""
+            class="eventpic"
+            src="https://www.billboard.com/wp-content/uploads/2020/07/oliver-tree-2020-cr-Parker-Day-billboard-1548-1595254862.jpg"
+          />
+          <p id="" class="venue">Venue</p>
+          <p id="" class="time">7:00 pm</p>
+          <button id="" type="button" class="sitebutton">site</button>
+        </div>
 
- <div class=" col-sm-2" style="margin-top: 2rem; margin-left:35px;border:3px solid black; border-radius: 15px 15px 15px 15px;">
-    <form>
-      <input class="form-control"  type="date"placeholder="date">
-    </form>
- </div>
+        <div class="cards">
+          <p id="" class="eventname">Event Name</p>
+          <img
+            id=""
+            class="eventpic"
+            src="https://www.billboard.com/wp-content/uploads/2020/07/oliver-tree-2020-cr-Parker-Day-billboard-1548-1595254862.jpg"
+          />
+          <p id="" class="venue">Venue</p>
+          <p id="" class="time">7:00 pm</p>
+          <button id="" type="button" class="sitebutton">site</button>
+        </div>
+
+        <div class="cards">
+          <p id="" class="eventname">Event Name</p>
+          <img
+            id=""
+            class="eventpic"
+            src="https://www.billboard.com/wp-content/uploads/2020/07/oliver-tree-2020-cr-Parker-Day-billboard-1548-1595254862.jpg"
+          />
+          <p id="" class="venue">Venue</p>
+          <p id="" class="time">7:00 pm</p>
+          <button id="" type="button" class="sitebutton">site</button>
+        </div>
+
+        <div class="cards">
+          <p id="" class="eventname">Event Name</p>
+          <img
+            id=""
+            class="eventpic"
+            src="https://www.billboard.com/wp-content/uploads/2020/07/oliver-tree-2020-cr-Parker-Day-billboard-1548-1595254862.jpg"
+          />
+          <p id="" class="venue">Venue</p>
+          <p id="" class="time">7:00 pm</p>
+          <button id="" type="button" class="sitebutton">site</button>
+        </div>
+
+        <div class="cards">
+          <p id="" class="eventname">Event Name</p>
+          <img
+            id=""
+            class="eventpic"
+            src="https://www.billboard.com/wp-content/uploads/2020/07/oliver-tree-2020-cr-Parker-Day-billboard-1548-1595254862.jpg"
+          />
+          <p id="" class="venue">Venue</p>
+          <p id="" class="time">7:00 pm</p>
+          <button id="" type="button" class="sitebutton">site</button>
+        </div> -->
+      </div>
+    </section>
+
     
-  <a href="#" class="btn Genre">Genre</a>
-  <a href="#" class="btn All-ages">All ages</a>
-  <a href="#" class="btn Afternoon">Afternoon</a>
-  <a href="#" class="btn Night">Night</a>
-  
-
 
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
-    <script src="./js.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./assets/jsAPI.js"></script>
+    
+  </body>
 </html>

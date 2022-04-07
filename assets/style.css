@@ -1,0 +1,163 @@
+
+
+
+.header {
+    background-color: #499edb;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.title  {
+    text-align: center;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#city {
+    font-weight: bold ;
+    color: black;  
+}
+
+#date {
+    color: black;
+}
+
+#search {
+    border: 2px;
+    border-color: black ;
+    border-radius: 50px;
+    margin: 20px;
+}
+
+form.search button{
+    border-radius: 50%;
+}
+
+.tags {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ border-radius: 50px; 
+ padding: 10px;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    border-radius: 50px;
+    border: 10px;
+    border-color: black;
+}
+
+  
+.pagebottom{
+    background-color: black;
+    width: 100%;
+    min-height: 200px;
+    height: max-content;
+    padding-bottom: 20px;
+}
+
+.events{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/*Selects all cards of the events section*/
+.events > div {
+    width:180px;
+    height: 200px;
+    background-color: white;
+    margin: 20px;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.cards{
+    width:180px;
+    height: 200px;
+    background-color: white;
+    margin: 20px;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    
+}
+
+.cards:hover{
+    width: 280px;
+    height: 300px;
+    min-height: fit-content;
+    transition: 500ms;
+}
+
+.eventname{
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 18px;
+    margin: 4% 4% 4% 5%;
+    color:  #9E63FF;
+}
+
+.cards:hover .eventname{
+    font-size:28px;
+    line-height: 26px;
+    transition: 500ms;
+}
+
+.venue{
+    display: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    margin: 0 3% 0 5%;
+}
+
+.cards:hover .venue{
+    display: block;
+}
+
+.time{
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0 0 0 5%;
+}
+
+.eventpic{
+    object-fit: cover;
+    width: 90%;
+    height: 60%;
+    margin-left: 5%;
+}
+
+.sitebutton{
+    opacity: 0%;
+    width: 50px;
+    height: max-content;
+    background-color: #9E63FF;
+    border-radius: 100px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: -10% 0 5% 75%;
+}
+
+.cards:hover .sitebutton{
+    opacity: 100%;
+    transition: 1000ms;
+    color: white;
+}
+

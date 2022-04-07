@@ -25,6 +25,13 @@
 }
 
 
+
+.city-search-input{
+    width: 300px;
+    position: relative;
+    display: flex;
+}
+
 .search {
     width: 300px;
     position: relative;
@@ -60,7 +67,9 @@
     font-size: 20px;
   }
 
-a.btn{
+
+
+.button {
     display: inline;
     position: relative;
     text-decoration: none;
@@ -69,35 +78,78 @@ a.btn{
     border-radius: 25px;
     background-color: black;
     left: 35%;
+
+}
+
+.btn {
+    margin-left: 50%;
+    text-decoration: none;
     
+}
+.Concert {
+    margin-right: 40px ;
+    border: 3px solid black;
+    font-size: 20px;
+    border-radius: 15px 15px 15px 15px;
     
 }
 
-a.btn.Genre:hover {
-    background-color:#A2EB2A ;
+.Festival{
+    margin-right: 40px;
+    border: 3px solid black;
+    font-size: 20px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.All-ages{
+    margin-right: 40px;
+    border: 3px solid black;
+    font-size: 20px;
+    border-radius: 15px 15px 15px 15px;
+
+}
+
+.Afternoon {
+    margin-right: 40px;
+    border: 3px solid black;
+    font-size: 20px;
+    border-radius: 15px 15px 15px 15px;
+
+}
+
+.Night {
+    margin-right: 40px;
+    border: 3px solid black;
+    font-size: 20px;
+    border-radius: 15px 15px 15px 15px;
+
+}
+
+.Concert:hover {
+    background-color: #A2EB2A;
+    transition-duration: 0.2s;
     color: black;
+
 }
 
-
-
-a.btn.All-ages:hover{
+.Festival:hover{
     background-color:#EB592A;
+    transition-duration: 0.2s;
     color: black;
 }
 
-a.btn.Afternoon:hover{
+.Night:hover{
     background-color: #499edb;
+    transition-duration: 0.2s;
     color: black;
 }
-
-a.btn.Night:hover {
+.Afternoon:hover{
     background-color: #E5FA1E;
+    transition-duration: 0.2s;
     color: black;
 }
-
-
-.form-control {
-    display: flex;
-    position: relative;
-    width: 100px;
+.All-ages:hover{
+    background-color:palevioletred;
+    transition-duration: 0.2s;
+    color: black;
 }
