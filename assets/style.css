@@ -143,6 +143,7 @@ html, body {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: .5rem;
 }
 
 /*Selects all cards of the events section*/
