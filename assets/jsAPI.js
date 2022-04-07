@@ -1,5 +1,5 @@
 //Open Weather API Key
-var weatherAPI = "c05979fd50e5119c43cbd3ab81fe852f";
+var weatherAPI = "7ff8ebfea098ff405322b7359f08920f";
 //TicketMaster API Explorer v2.0
 var musicAPI = "BZZo8qKtqkk1hGSW6C14VUHCfMKAfSgz";
 //google geocoding API
@@ -25,7 +25,7 @@ var datePicker = document.getElementById("datepicker");
 var cityListEl = document.querySelector("#city-list");
 var forecastLimit = moment().date() + 5;
 var selectedDateDay = moment(selectedDate).date();
-
+var dayValue = forecastLimit - selectedDateDay;
 
 //readies the date picker function and sets default date to today
 datePicker.value = selectedDate;
@@ -44,22 +44,20 @@ $(".search-bar").submit(function (event) {
   $("#header-date").text(moment(selectedDate).format("MMM Do, YYYY"));
   selectedDateDay = moment(selectedDate).date();
   //gets the selectedDate's day
- 
-  
+  dayValue = forecastLimit - selectedDateDay;
   //checkWithinForeCast(selectedDate);
   //console.log(radioTime);
   //creates the time parameter for the music query
-  
 
   if (radioTime === "day") {
     startTime = "03:00:00";
-    //endTime = "15:00:00";
+    endTime = "15:00:00";
   } else if (radioTime === "night") {
     startTime = "15:00:01";
-    //endTime = "23:59:59";
+    endTime = "23:59:59";
   } else if (radioTime === "allDay") {
     startTime = "03:00:00";
-    //endTime = "23:59:59";
+    endTime = "23:59:59";
   }
 
   //console.log(startTime);
@@ -71,14 +69,14 @@ $(".search-bar").submit(function (event) {
   fetchData(city);
 });
 
-
-
 function fetchData(city) {
   storeCity(city);
   $("#header-city").html(city);
   fetchWeatherData(city);
   fetchMusicData(city);
   renderCityButtons();
+  selectedDate = datePicker.value;
+  $("#header-date").text(moment(selectedDate).format("MMM Do, YYYY"));
 }
 //queries initial values for page load
 
@@ -160,12 +158,12 @@ function fetchMusicData(city) {
     "&startDateTime=" +
     selectedDate +
     "T" +
-    startTime + "Z";
-    //"Z&endDateTime=" +
-   // selectedDate +
-   // "T" +
-    //endTime +
-    //"Z";
+    startTime +
+    "Z&endDateTime=" +
+    selectedDate +
+    "T" +
+    endTime +
+    "Z";
   //will take parameter inputs to create query URL.
   //if loop here.
   //console.log(queryMusicURL);
@@ -282,11 +280,17 @@ function getForecast(lat, lon) {
 }
 //prints forecast data
 function printForecast(data) {
-  var temp = Math.round(data.daily[0].temp.day);
-  var weathericon = data.daily[0].weather[0].icon;
+  var iValue = 0;
+  if (dayValue <= 5) {
+    for (var i = 0; i < dayValue; i++)
+     iValue++;
+  }
+  
+  console.log(iValue);
+  console.log(dayValue);
+  var temp = Math.round(data.daily[iValue].temp.day);
+  var weathericon = data.daily[iValue].weather[0].icon;
   var iconurl = "https://openweathermap.org/img/wn/" + weathericon + "@2x.png";
   $("#temp").html(temp + "°F");
   $("#weather-icon").html("<img class='icon' src=" + iconurl + ">");
 }
-
-
