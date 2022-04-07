@@ -21,6 +21,7 @@ var selectedDate = date.toISOString().substring(0, 10);
 var eventsSection = document.querySelector(".events");
 var eventTitle = document.querySelector("#event");
 var datePicker = document.getElementById("datepicker");
+var cityListEl = document.querySelector("#city-list");
 
 //readies the date picker function and sets default date to today
 datePicker.value = selectedDate;
@@ -42,13 +43,13 @@ $(".search-bar").submit(function (event) {
 
   if (radioTime === "day") {
     startTime = "03:00:00";
-    endTime = "15:00:00";
+    //endTime = "15:00:00";
   } else if (radioTime === "night") {
     startTime = "15:00:01";
-    endTime = "23:59:59";
+    //endTime = "23:59:59";
   } else if (radioTime === "allDay") {
     startTime = "03:00:00";
-    endTime = "23:59:59";
+    //endTime = "23:59:59";
   }
 
   //console.log(startTime);
@@ -57,12 +58,16 @@ $(".search-bar").submit(function (event) {
   //console.log(city);
 
   //sets search parameter displays
+  fetchData(city);
+});
+
+function fetchData(city) {
   storeCity(city);
   $("#header-city").html(city);
   fetchWeatherData(city);
   fetchMusicData(city);
-});
-
+  renderCityButtons();
+}
 //queries initial values for page load
 
 initParameters();
@@ -81,6 +86,7 @@ function initParameters() {
   $("#header-city").html(city);
   fetchWeatherData(city);
   fetchMusicData(city);
+  renderCityButtons();
 }
 
 //stores city in city List
@@ -88,8 +94,27 @@ function storeCity(city) {
   cityList.push(city);
   console.log(cityList);
   //storedCities.push(cityList);
-
+  cityList = [...new Set(cityList)];
   localStorage.setItem("cityList", JSON.stringify(cityList));
+}
+
+//renders city buttons
+function renderCityButtons() {
+  cityListEl.innerHTML = "";
+  //Will only display the first 4 searches
+  if (cityList.length > 4) {
+    cityList.pop();
+  }
+  for (var i = 0; i < cityList.length; i++) {
+    var button = document.createElement("button");
+    button.classList = "btn btn-search collection-item";
+    button.textContent = cityList[i];
+    $(".collection-item").click(function () {
+      var city = $(this)[0].textContent;
+      fetchData(city);
+    });
+    cityListEl.appendChild(button);
+  }
 }
 
 //fetch data from OpenWeather API based on search bar input
@@ -150,12 +175,12 @@ function fetchMusicData(city) {
     "&startDateTime=" +
     selectedDate +
     "T" +
-    startTime +
-    "Z&endDateTime=" +
-    selectedDate +
-    "T" +
-    endTime +
-    "Z";
+    startTime + "Z";
+    //"Z&endDateTime=" +
+   // selectedDate +
+   // "T" +
+    //endTime +
+    //"Z";
   //will take parameter inputs to create query URL.
   //if loop here.
   console.log(queryMusicURL);
