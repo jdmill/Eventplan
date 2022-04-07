@@ -6,7 +6,6 @@ var musicAPI = "BZZo8qKtqkk1hGSW6C14VUHCfMKAfSgz";
 var geocodingAPI = "AIzaSyBp0qdtLkgEAa-WU1_78Yt3TOiB3gR-Rn0";
 //inits var
 var city = "";
-
 var zip = "";
 
 //init values
@@ -41,7 +40,7 @@ $(".search-bar").submit(function (event) {
   
 
   if (radioTime === "day") {
-    startTime = "06:00:00";
+    startTime = "0:00:00";
     endTime = "15:00:00";
   } else if (radioTime === "night") {
     startTime = "15:00:01";
@@ -57,6 +56,7 @@ $(".search-bar").submit(function (event) {
   //console.log(city);
 
   //sets search parameter displays
+  storeCity(city);
   $("#header-city").html(city);
   fetchWeatherData(city);
   fetchMusicData(city);
@@ -65,14 +65,32 @@ $(".search-bar").submit(function (event) {
 //queries initial values for page load
 
 initParameters();
+
 //function that pulls initially for first page load
 function initParameters() {
+  var storedCities = JSON.parse(localStorage.getItem("cityList"));
+  console.log(storedCities);
+
+  if (storedCities !== null) {
+    cityList = storedCities;
+  }
+
   $("#header-date").text(moment().format("MMM Do, YYYY"));
   var city = "Atlanta";
   $("#header-city").html(city);
   fetchWeatherData(city);
   fetchMusicData(city);
 }
+
+//stores city in city List
+function storeCity(city) {
+  cityList.push(city);
+  console.log(cityList);
+  //storedCities.push(cityList);
+
+  localStorage.setItem("cityList", JSON.stringify(cityList));
+}
+
 //fetch data from OpenWeather API based on search bar input
 function fetchWeatherData(city) {
   var queryWeatherURL =
