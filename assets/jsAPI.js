@@ -134,34 +134,6 @@ function fetchWeatherData(city) {
       //console.log(data);
     });
 }
-/*//fetches geocode data
-function fetchGeocodeData(lat, lon) {
-  var queryGeocodeURL =
-    "https://maps.googleapis.com/maps/api/geocode/json?latlng=" +
-    lat +
-    "," +
-    lon +
-    "&key=" +
-    geocodingAPI;
-  
-  //fetches zip code
-  fetch(queryGeocodeURL).then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    //loops through the first response from the location data
-    var addressComponents = data.results[0].address_components;
-    for (var i = 0; i < addressComponents.length; i++) {
-      //if postal code type is present set zip to the value of short_name
-      if (addressComponents[i].types.includes('postal_code')) {
-        var zip = data.results[0].address_components[i].short_name;
-        console.log(zip);
-        fetchMusicData(zip);
-        //return zip;
-      }
-    }
-    console.log(data);
-  });
-}*/
 
 //generates music query URL
 function fetchMusicData(city) {
