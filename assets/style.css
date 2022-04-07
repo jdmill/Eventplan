@@ -4,7 +4,7 @@ html, body {
     overflow-x: hidden;
 }
 
-
+/*header styling*/
 .header {
     background-color: #9E63FF;
     width: 100%;
@@ -66,6 +66,8 @@ html, body {
 }
 
 
+/*Search button styling*/
+
 .search-button {
     border-radius: 3.125rem;
     height: 2.3rem;
@@ -75,15 +77,26 @@ html, body {
     border: none;
 }
 
+<
 .search-button:hover{
     background-color: #9E63FF;
 }
 
+/*Search History List*/
+.collection {
+    margin: 0;
+    padding:0;
+}
 #city-search-input {
     border-radius: 3.125rem;
     border: .1rem solid black;
     height: 2.5rem;
+
     margin-left: 2rem;
+
+    margin-right: .3rem;
+    margin-left: 1.5rem;
+
 }
 
 
@@ -91,23 +104,36 @@ html, body {
     border-radius: 1.875rem;
     height: 2.5rem;
     border: solid black .1rem;
+
     margin-left: .5rem;
+
+    margin-right: 3rem;
+
 }
 
 /*parameter selector buttons*/
 .para-buttons {
     border-radius: 3.125rem;
     padding: 0.625rem;
+    margin-left: 3rem;
+    margin-right: 10rem;
     
 }
+
 .row{
     margin: 0 !important;
+
+
+.param-div {
+    margin-left: 10rem;
+
 }
 /*radio button styling*/
 .radio-toolbar{
     margin-right: 2rem;
 }
 
+/*Radio Buttons Toolbar*/
 .radio-toolbar input[type="radio"] {
     opacity: 0;
     width: 0;
@@ -115,15 +141,20 @@ html, body {
 }
 
 .radio-toolbar label {
-    display: inline-block;
     background-color: white;
     padding: 0.313rem 0.313rem;
+
     font-family: sans-serif, "Inter";
     font-size: 1rem;
     border: 0.1rem solid black;
     border-radius: 2.188rem;
     margin-bottom: 0;
     
+
+    font-size: 1rem;
+    border: 0.1rem solid black;
+    border-radius: 2.188rem;
+
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
@@ -131,6 +162,7 @@ html, body {
     border-color: #9E63FF;
     color: white;
 }
+
 
 ul{
     padding-left: 0;
@@ -175,6 +207,8 @@ ul{
     border-color: black;
 }
 
+=======
+/*Card Display Area*/
 .pagebottom{
     background-color: black;
     width: 100%;
@@ -189,6 +223,7 @@ ul{
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: .5rem;
 }
 
 /*Selects all cards of the events section*/
@@ -275,3 +310,65 @@ ul{
     color: white;
 }
 
+/*media Queries for site responsiveness*/
+@media only screen and (max-width: 1070px) {
+    #header-date {
+        font-size: 3vw;
+    }
+    .param-div {
+        margin-left: 0;
+    }
+    .para-buttons {
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .param-div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2%;
+    }
+
+    #datepicker {
+        margin-bottom: 2%;
+    }
+
+    .radio-toolbar {
+        margin-right: 10%;
+    }
+    #header-date {
+        margin-left: 3%;
+    }
+    
+    #header-city {
+        font-size: 6vw;
+    }
+    
+    .pageTitle {
+        font-size: 6vw;
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .para-buttons {
+        justify-content: center;
+        margin:0;
+    }
+    .search-bar{
+        justify-content: center;
+    }
+
+    .radio-toolbar {
+        margin: 0;
+    }
+    .param-div {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-bottom: 2%;
+    }
+    #datepicker {
+        margin-right: 2%;
+    }
+}

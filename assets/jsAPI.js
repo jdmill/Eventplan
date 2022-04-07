@@ -3,14 +3,14 @@ var weatherAPI = "c05979fd50e5119c43cbd3ab81fe852f";
 //TicketMaster API Explorer v2.0
 var musicAPI = "BZZo8qKtqkk1hGSW6C14VUHCfMKAfSgz";
 //google geocoding API
-var geocodingAPI = "AIzaSyBp0qdtLkgEAa-WU1_78Yt3TOiB3gR-Rn0";
+//var geocodingAPI = "AIzaSyBp0qdtLkgEAa-WU1_78Yt3TOiB3gR-Rn0";
 //inits var
 var city = "";
 var zip = "";
 var cityList = [];
 
 //init values
-var startTime = "07:00:00";
+var startTime = "01:00:00";
 var endTime = "23:00:00";
 
 //creates initial date value to date picker
@@ -158,15 +158,16 @@ function fetchMusicData(city) {
     "&startDateTime=" +
     selectedDate +
     "T" +
-    startTime +
-    "Z&endDateTime=" +
-    selectedDate +
-    "T" +
-    endTime +
-    "Z";
+    startTime + "Z";
+    //this broke need to fix
+    //"Z&endDateTime=" +
+    //selectedDate +
+    //"T" +
+    //endTime +
+    //"Z";
   //will take parameter inputs to create query URL.
   //if loop here.
-  //console.log(queryMusicURL);
+  console.log(queryMusicURL);
   //fetches TicketMaster API data based on inputed parameters
   fetch(queryMusicURL)
     .then(function (response) {
