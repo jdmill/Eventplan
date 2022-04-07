@@ -16,12 +16,16 @@ var endTime = "23:00:00";
 //creates initial date value to date picker
 var date = new Date();
 var selectedDate = date.toISOString().substring(0, 10);
+var now = moment().format("YYYY-MM-DD");
 
 //queries elements
 var eventsSection = document.querySelector(".events");
 var eventTitle = document.querySelector("#event");
 var datePicker = document.getElementById("datepicker");
 var cityListEl = document.querySelector("#city-list");
+var forecastLimit = moment().date() + 5;
+var selectedDateDay = moment(selectedDate).date();
+
 
 //readies the date picker function and sets default date to today
 datePicker.value = selectedDate;
@@ -36,8 +40,14 @@ $(".search-bar").submit(function (event) {
   ).value;
   var city = $("#city-search-input").val();
   selectedDate = datePicker.value;
+  console.log(selectedDate);
+  $("#header-date").text(moment(selectedDate).format("MMM Do, YYYY"));
+  selectedDateDay = moment(selectedDate).date();
+  //gets the selectedDate's day
+ 
+  
+  //checkWithinForeCast(selectedDate);
   //console.log(radioTime);
-
   //creates the time parameter for the music query
   
 
@@ -60,6 +70,8 @@ $(".search-bar").submit(function (event) {
   //sets search parameter displays
   fetchData(city);
 });
+
+
 
 function fetchData(city) {
   storeCity(city);
@@ -130,6 +142,7 @@ function fetchWeatherData(city) {
     })
     .then(function (data) {
       //fetchGeocodeData(data.coord.lat, data.coord.lon);
+      //console.log(data);
       getForecast(data.coord.lat, data.coord.lon);
       //console.log(data);
     });
@@ -155,13 +168,13 @@ function fetchMusicData(city) {
     //"Z";
   //will take parameter inputs to create query URL.
   //if loop here.
-  console.log(queryMusicURL);
+  //console.log(queryMusicURL);
   //fetches TicketMaster API data based on inputed parameters
   fetch(queryMusicURL)
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (data) {
-          console.log(data);
+          //console.log(data);
           createEventCard(data);
         });
       }
@@ -274,7 +287,6 @@ function printForecast(data) {
   var iconurl = "https://openweathermap.org/img/wn/" + weathericon + "@2x.png";
   $("#temp").html(temp + "°F");
   $("#weather-icon").html("<img class='icon' src=" + iconurl + ">");
-  
-
 }
-//function that will parse weather data and display somewhere on the page
+
+
