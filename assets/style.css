@@ -30,6 +30,10 @@ px to rem */
     background-color: #9E63FF;
 }
 
+#ui-state-default{
+    color: #9E63FF;
+}
+
 
 
 #city {
@@ -186,7 +190,7 @@ form.search button{
     font-size: 1rem;
     font-weight: 400;
     text-align: center;
-    margin: 0% 0 5% 75%;
+    margin: 0% 0% 5% 75%;
 }
 
 .cards:hover .sitebutton{
@@ -195,27 +199,39 @@ form.search button{
     color: white;
 }
 
-/* Calender Design */
-#ui-datepicker-div{
-    background-color: white;
-    height: 18rem;
-    width: 18rem;
 
+
+/* Calender Design */
+/* Color for NonNumeric Font, Color for Background, Height, Width, Font Weight */
+#ui-datepicker-div{
+    color: white;
+    font-weight: 500;
+    background-color: #9E63FF;
+    height: 18rem;
+    width: 22rem;
+    border-radius: .4rem;
+    text-align: center;
 }
+/* color, Size, and Weight for Numeric Font  */
 .ui-state-default{
-    color: #9E63FF;
+    color: #ffffff;
     margin: .5rem;
+    font-weight: 700;   
     
 } 
+/* Hover Feature */
+.ui-state-default:hover{
+    color: #9E63FF;
+    background-color: white;
+    margin: .5rem; 
+} 
+/* Current Day */
 .ui-state-highlight{
-    color: white;
-    background-color: #9E63FF;
+    color: #9E63FF;
+    background-color: white;
 }
-
+/* Spacing for numeric days */
 td{
     padding: .5rem .5rem;
 }
-
-tr {
-    color: #9E63FF;
-}
+/* Calender Design */
