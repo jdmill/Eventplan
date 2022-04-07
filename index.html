@@ -8,12 +8,47 @@
   <link rel="stylesheet" href="./style.css" />
   <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
+  <div class = "header" >
+    <div id = "city" >
+      <h1>City</h1>
+    </div>
+    <h1 class =" title">EventPlan</h1>
+    <div id = "date" >
+      <h1>April 5, 2022</h1>
+    </div>
+  
+  </div> 
+
+  <div class="wrap">
+    <div class="search">
+       <input type="text" class="searchTerm" placeholder="Location...">
+       <button type="submit" class="searchButton">
+         <i class="fa fa-search"></i>
+      </button>
+    </div>
+ </div>
 
 
+ <div class=" col-sm-2" style="margin-top: 2rem; margin-left:35px;border:3px solid black; border-radius: 15px 15px 15px 15px;">
+    <form>
+      <input class="form-control"  type="date"placeholder="date">
+    </form>
+ </div>
+    
+  <a href="#" class="btn Genre">Genre</a>
+  <a href="#" class="btn All-ages">All ages</a>
+  <a href="#" class="btn Afternoon">Afternoon</a>
+  <a href="#" class="btn Night">Night</a>
+  
 
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
     <script src="./js.js"></script>
 </body>
 </html>

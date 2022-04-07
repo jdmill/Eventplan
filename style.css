@@ -1,0 +1,103 @@
+.header {
+    background-color: #499edb;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.title  {
+    text-align: center;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#city {
+    font-weight: bold ;
+    color: black;  
+}
+
+#date {
+    color: black;
+}
+
+
+.search {
+    width: 300px;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid black;
+    border-right: none;
+    margin-left: 20%;
+    padding: 5px;
+    height: 35px;
+    border-radius: 15px 15px 15px 15px;
+    outline: none;
+    color: black;
+  }
+  
+  .searchTerm:focus{
+    color: black;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid black;
+    background: black;
+    text-align: center;
+    color: #fff;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+a.btn{
+    display: inline;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    background-color: black;
+    left: 35%;
+    
+    
+}
+
+a.btn.Genre:hover {
+    background-color:#A2EB2A ;
+    color: black;
+}
+
+
+
+a.btn.All-ages:hover{
+    background-color:#EB592A;
+    color: black;
+}
+
+a.btn.Afternoon:hover{
+    background-color: #499edb;
+    color: black;
+}
+
+a.btn.Night:hover {
+    background-color: #E5FA1E;
+    color: black;
+}
+
+
+.form-control {
+    display: flex;
+    position: relative;
+    width: 100px;
+}
