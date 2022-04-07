@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EventPlan</title>
-    <link rel="stylesheet" href="./assets/style.css" />
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="./assets/style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -34,34 +35,35 @@
     </header>
 
     <!--Search bar div-->
-    <div class="d-flex justify-content-around p-2 row" id="search-container">
-      <div class="mr-auto para-buttons ml-5">
+    <div class="d-flex justify-content-around row" id="search-container">
+      <div class="para-buttons">
         
         <form class="search-bar row">
           <input type="search" id="city-search-input" placeholder="Enter City:" />
           <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
         </form>  
-        <ul class="collection blue-text" id='city-list'></ul>
+        <ul class="collection" id='city-list'></ul>
       </div>
 
-      <div class="mr-5 row ">
-        <!--jQuery date picker calender-->
-      
-        <input type="date" id="datepicker" name="date-picker"
-        value="">
-      </div>
+      <div class="mr-2 row align-items-center param-div">
+        
       <!--parameter selectors-->
-      <div class="radio-toolbar">
-        <input type="radio" id="radioDay" name="radioTime" value="day">
-        <label for="radioDay">Day</label>
+      <div class="radio-toolbar d-flex align-items-center">
+        <input type="radio" class="mr-1" id="radioDay" name="radioTime" value="day">
+        <label for="radioDay" class="align-items-center">Day</label>
 
-        <input type="radio" id="radioNight" name="radioTime" value="night">
+        <input type="radio" class="mr-1" id="radioNight" name="radioTime" value="night">
         <label for="radioNight">Night</label>
 
-        <input type="radio" id="radioAllDay" name="radioTime" value="allDay" checked>
+        <input type="radio" class="mr-1" id="radioAllDay" name="radioTime" value="allDay" checked>
         <label for="radioAllDay">All Day</label>
     
+        <!--jQuery date picker calender-->
+      
+        
       </div>
+      <input type="date" class="ml-2 mb-2" id="datepicker" name="date-picker"
+        value="">
     </div>
     
 
