@@ -54,3 +54,9 @@ THEN I am presented with weather for that day in the form of the Temp and an ICO
  Moment.js
 
  Jquery
+
+## Mock-Ups
+
+https://user-images.githubusercontent.com/9371206/162339105-327de206-f683-414f-9f30-0c691c3e4ff9.mp4
+
+![mobile-EventPlan](https://user-images.githubusercontent.com/9371206/162339218-9e725fcd-1d0c-47dc-ae22-ff0d379f1941.png)
