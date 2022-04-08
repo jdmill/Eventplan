@@ -26,7 +26,20 @@ Then the presented results change accordingly
 WHEN I choose a date, if it is with the forecast range
 THEN I am presented with weather for that day in the form of the Temp and an ICON
 ```
-## Features
+## Feature breakdown and description
+```
+Search Functionality
+*By Location
+*By Time
+*By Date
+
+Weather Information
+*Provides weather information if within forecast range - "Within 5 days of present date"
+
+Accessibility
+*Mobile Responsive Design
+*Links provided to TicketMaster box office for every presented event
+```
 
  We implemented some features that make our website accessible and easy to navigate for every user.
  Using the search bar will assist the user in choosing the desired location for an event they would like to attend
@@ -37,24 +50,46 @@ THEN I am presented with weather for that day in the form of the Temp and an ICO
  Once the user finds the perfect event they would like to attend, there is a button that will link the user to ticketmaster.com, once there the user can purchase their tickets.
  Our website is also mobile
 
+## Future Updates
+Possible Future Updates:
+While working on this project we were unable to implement all the initial design features we planned to create.
 
+We intend to include:
+*Genre Search
+*More detailed weather reports
+*Longer Forecast
+*Better result filters
+*And much, much, more!
+
+ ## CSS FrameWork
+ Bootstrap 4.3.1
+ https://getbootstrap.com/
  ## APIs
 
- for this project we used:
+OpenWeather One Call One Call API 1.0
+https://openweathermap.org/api/one-call-api
 
- OpenWeather One Call api 
-
- Ticketmaster api 
-
+Ticketmaster Explorer v2.0
+https://developer.ticketmaster.com/products-and-docs/apis/getting-started/
 
  ## Javascript
 
- for this project we used:
+ Moment.js 2.24.0
+ https://momentjs.com/
 
- Moment.js
+jQuery 3.6.0
+https://jquery.com/download/
 
- Jquery
+jQuery UI 1.13 
+https://jqueryui.com/
 
+## Deployment and GitHub Links
+
+GitHub Link :
+https://github.com/jdmill/Eventplan
+
+Deployment Link :
+https://jdmill.github.io/Eventplan/
 ## Mock-Ups
 
 https://user-images.githubusercontent.com/9371206/162339105-327de206-f683-414f-9f30-0c691c3e4ff9.mp4
