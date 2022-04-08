@@ -34,37 +34,32 @@
       </div>
     </header>
 
-    <!--Search bar div-->
-    <div class="d-flex justify-content-around row" id="search-container">
-      <div class="para-buttons">
-        
-        <form class="search-bar row">
+    <div class="row justify-content-between">
+      <div class="row">
+        <!--Search bar div-->
+        <form class="search-bar">
           <input type="search" id="city-search-input" placeholder="Enter City:" />
           <button class="search-button" type="submit"><i class="fa fa-search"></i></button>
-        </form>  
-        <ul class="collection" id='city-list'></ul>
+        </form>
+
+        <!--jQuery date picker calender-->      
+        <input type="date" id="datepicker" name="date-picker" value="">
       </div>
 
-      <div class="mr-2 row align-items-center param-div">
-        
-      <!--parameter selectors-->
-      <div class="radio-toolbar d-flex align-items-center">
-        <input type="radio" class="mr-1" id="radioDay" name="radioTime" value="day">
-        <label for="radioDay" class="align-items-center">Day</label>
+        <!--parameter selectors-->
+      <div class="radio-toolbar">
+        <input type="radio" id="radioDay" name="radioTime" value="day">
+        <label for="radioDay">Day</label>
 
-        <input type="radio" class="mr-1" id="radioNight" name="radioTime" value="night">
+        <input type="radio" id="radioNight" name="radioTime" value="night">
         <label for="radioNight">Night</label>
 
-        <input type="radio" class="mr-1" id="radioAllDay" name="radioTime" value="allDay" checked>
+        <input type="radio" id="radioAllDay" name="radioTime" value="allDay" checked>
         <label for="radioAllDay">All Day</label>
-    
-        <!--jQuery date picker calender-->
-      
-        
       </div>
-      <input type="date" class="ml-2 mb-2" id="datepicker" name="date-picker"
-        value="">
     </div>
+
+    <ul class="collection blue-text" id='city-list'></ul>
     
 
     <!-- event cards -->

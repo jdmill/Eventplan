@@ -3,6 +3,7 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
 /*header styling*/
 .header {
     background-color: #9E63FF;
@@ -29,7 +30,7 @@ html, body {
     font-family: "Inter", sans-serif;
     font-weight: 800;
     font-size: 2rem;
-    margin-left: 6rem;
+    margin-left: 3rem;
 }
 
 .pageTitle{
@@ -41,12 +42,11 @@ html, body {
 }
 
 .weather{
-    width: 9rem;
+    width: fit-content;
     height: 3.5rem;
     margin-right: -1rem;
     border: solid .15rem black;
     border-radius: 100px 0 0 100px;
-    
 }
 
 .temp{
@@ -55,6 +55,7 @@ html, body {
     font-weight: 800;
     font-size: 1.75rem;
     margin-top: .5rem;
+    margin-left: .75rem;
 }
 
 .icon{
@@ -65,6 +66,12 @@ html, body {
 }
 
 /*Search button styling*/
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 .search-button {
     border-radius: 3.125rem;
     height: 2.3rem;
@@ -72,21 +79,19 @@ html, body {
     color: white;
     background-color: black;
     border: none;
+    margin-right: .5rem;
 }
 
-/*Search History List*/
-.collection {
-    margin: 0;
-    padding:0;
+.search-button:hover{
+    background-color: #9E63FF;
 }
+
 #city-search-input {
     border-radius: 3.125rem;
     border: .1rem solid black;
     height: 2.5rem;
-    margin-right: .3rem;
-    margin-left: 1.5rem;
+    margin-left: 2rem;
 }
-
 
 #datepicker {
     border-radius: 1.875rem;
@@ -99,28 +104,34 @@ html, body {
 .para-buttons {
     border-radius: 3.125rem;
     padding: 0.625rem;
-    margin-left: 3rem;
-    margin-right: 10rem;
-    
 }
 
-.param-div {
-    margin-left: 10rem;
+.row{
+    margin: 0 !important;
 }
-/*radio button styling*/
 
 /*Radio Buttons Toolbar*/
+.radio-toolbar{
+    margin-right: 2rem;
+}
+
 .radio-toolbar input[type="radio"] {
     opacity: 0;
     width: 0;
+    margin: 1rem 0 0 0;
 }
 
 .radio-toolbar label {
+    display: inline-block;
+    width: 5rem;
+    text-align: center;
     background-color: white;
     padding: 0.313rem 0.313rem;
+    font-family: sans-serif, "Inter";
     font-size: 1rem;
     border: 0.1rem solid black;
     border-radius: 2.188rem;
+    margin-bottom: 0;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
@@ -129,13 +140,41 @@ html, body {
     color: white;
 }
 
+ul{
+    padding-left: 0;
+    margin: .5rem 0 1rem 2rem !important;
+    font-family: sans-serif, "Inter";
+}
+
+.btn{
+    border: solid black .1rem !important;
+    border-radius: 4rem !important;
+    padding: 0 !important;
+    margin-right: .5rem;
+    width: 5rem;
+    min-width: fit-content;
+    height: 2.5rem;
+}
+
+.btn:hover{
+    border: solid #9E63FF .1rem !important;
+    background-color: #9E63FF;
+    color: white !important;
+    border-radius: 4rem !important;
+    padding: 0 !important;
+    margin-right: .5rem;
+    width: 4.5rem;
+    height: 2.5rem;
+}
+
 /*Card Display Area*/
 .pagebottom{
     background-color: black;
     width: 100%;
-    min-height: 12.5rem;
+    min-height: 25rem;
     height: max-content;
     padding-bottom: 1.25rem;
+    margin-top: 4rem;
 }
 
 .events{
@@ -181,8 +220,6 @@ html, body {
     line-height: 1.625rem;
     transition: 500ms;
     text-shadow: 0.063rem 0.063rem .125rem black,
-    /* 0 0 1.563rem blue,
-    0 0 .313rem darkblue; */
 }
 
 .venue{
@@ -233,62 +270,50 @@ html, body {
 /*media Queries for site responsiveness*/
 @media only screen and (max-width: 1070px) {
     #header-date {
-        font-size: 3vw;
+        font-size: 3.5vw;
+        margin-left: 2%;
     }
-    .param-div {
-        margin-left: 0;
-    }
+
     .para-buttons {
         margin-right: 0;
     }
 }
 @media only screen and (max-width: 760px) {
-    .param-div {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2%;
-    }
-
     #datepicker {
-        margin-bottom: 2%;
-    }
-
-    .radio-toolbar {
-        margin-right: 10%;
-    }
-    #header-date {
-        margin-left: 3%;
+        margin: 2%;
+        margin-left: none;
     }
     
+
     #header-city {
-        font-size: 6vw;
+        font-size: 4.5vw;
+        margin-left: 1%;
     }
     
     .pageTitle {
-        font-size: 6vw;
-        margin-left: 5%;
+        font-size: 5vw;
+        margin-left: 2%;
     }
-}
 
-@media only screen and (max-width: 600px) {
-    .para-buttons {
-        justify-content: center;
-        margin:0;
+
+    .temp{
+        font-size: 5vw;
+        margin-left: .75rem;
     }
-    .search-bar{
-        justify-content: center;
+
+    .icon{
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .row{
+        justify-content: center !important;
     }
 
     .radio-toolbar {
         margin: 0;
+        justify-content :center;
     }
-    .param-div {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        margin-bottom: 2%;
-    }
-    #datepicker {
-        margin-right: 2%;
-    }
+
 }
+
